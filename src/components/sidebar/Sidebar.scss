@@ -1,109 +1,109 @@
 .sidebar {
+  display: flex;
+  flex: 0.3;
+  height: 100vh;
+  //background-color: #393943; // Todo: Move to Home later
+
+  .sidebarLeft {
     display: flex;
-    flex: 0.3;
-    height: 100vh;
-    //background-color: #393943; // Todo: Move to Home later
+    flex-direction: column;
+    align-items: center;
+    background-color: #212225;
+    padding: 7px 15px;
 
-    .sidebarLeft {
+    .serverIcon {
+      width: 60px;
+      height: 60px;
+      background-color: #393943;
+      border-radius: 9999px;
+      margin-bottom: 10px;
+      position: relative;
+      margin-top: 7px;
+
+      img {
+        position: absolute;
+        width: 50px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  .sidebarRight {
+    background-color: #303136;
+    width: 300px;
+    position: relative;
+    flex-grow: 1;
+
+    .sidebarTop {
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    .sidebarChannels {
+      padding: 13px;
+
+      .sidebarChannelsHeader {
         display: flex;
-        flex-direction: column;
+        color: white;
+        justify-content: space-between;
         align-items: center;
-        background-color: #212225;
-        padding: 7px 15px;
+        margin-top: 5px;
 
-        .serverIcon {
-            width: 60px;
-            height: 60px;
-            background-color: #393943;
-            border-radius: 9999px;
-            margin-bottom: 10px;
-            position: relative;
-            margin-top: 7px;
-
-            img {
-                position: absolute;
-                width: 50px;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%)
-            }
+        .sidebarHeader {
+          display: flex;
         }
+
+        .sidebarAddIcon {
+          cursor: pointer;
+        }
+      }
     }
 
-    .sidebarRight {
-        background-color: #303136;
-        width: 300px;
-        position: relative;
-        flex-grow: 1;
+    .sidebarFooter {
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 93%;
+      padding-bottom: 10px;
+      border-top: 1px solid #686e6e;
+      padding-top: 10px;
+      margin-left: -3px;
 
-        .sidebarTop {
+      .sidebarAccount {
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 60px;
+          border-radius: 50%;
+        }
+
+        .accountName {
+          margin-left: 5px;
+
+          h4 {
             color: white;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px;
+            font-weight: 500;
+          }
+
+          span {
+            color: #686e6e;
+          }
         }
+      }
 
-        .sidebarChannels {
-            padding: 13px;
-
-            .sidebarChannelsHeader {
-                display: flex;
-                color: white;
-                justify-content: space-between;
-                align-items: center;
-                margin-top: 5px;
-
-                .sidebarHeader {
-                    display: flex;
-                }
-
-                .sidebarAddIcon {
-                    cursor: pointer;
-                }
-            }
-        }
-
-        .sidebarFooter {
-            position: absolute;
-            bottom: 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 93%;
-            padding-bottom: 10px;
-            border-top: 1px solid #686e6e;
-            padding-top: 10px;
-            margin-left: -3px;
-
-            .sidebarAccount {
-                display: flex;
-                align-items: center;
-
-                img {
-                    width: 60px;
-                    border-radius: 50%;
-                }
-
-                .accountName {
-                    margin-left: 5px;
-
-                    h4 {
-                        color: white;
-                        font-weight: 500;
-                    }
-
-                    span {
-                        color: #686e6e;
-                    }
-                } 
-            }
-
-            .sidebarVoice {
-                display: flex;
-                align-items: center;
-                color: #686e6e ;
-            }
-        }
+      .sidebarVoice {
+        display: flex;
+        align-items: center;
+        color: #686e6e;
+      }
     }
+  }
 }
